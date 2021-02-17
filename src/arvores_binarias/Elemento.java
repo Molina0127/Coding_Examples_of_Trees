@@ -1,38 +1,38 @@
 package arvores_binarias;
 
-public class Elemento <nodo>{
+public class Elemento <TIPO>{
 
-	private nodo valor;
-	private Elemento<nodo> esquerda;
-	private Elemento<nodo> direita;
+	private TIPO valor;
+	private Elemento<TIPO> esquerda;
+	private Elemento<TIPO> direita;
 	
-	public Elemento(nodo novoValor) {
+	public Elemento(TIPO novoValor) {
 		this.valor = novoValor;
 		this.esquerda = null;
 		this.direita = null;
 	}
 
-	public nodo getValor() {
+	public TIPO getValor() {
 		return valor;
 	}
 
-	public void setValor(nodo valor) {
+	public void setValor(TIPO valor) {
 		this.valor = valor;
 	}
 
-	public Elemento<nodo> getEsquerda() {
+	public Elemento<TIPO> getEsquerda() {
 		return esquerda;
 	}
 
-	public void setEsquerda(Elemento<nodo> esquerda) {
+	public void setEsquerda(Elemento<TIPO> esquerda) {
 		this.esquerda = esquerda;
 	}
 
-	public Elemento<nodo> getDireita() {
+	public Elemento<TIPO> getDireita() {
 		return direita;
 	}
 
-	public void setDireita(Elemento<nodo> direita) {
+	public void setDireita(Elemento<TIPO> direita) {
 		this.direita = direita;
 	}
 	

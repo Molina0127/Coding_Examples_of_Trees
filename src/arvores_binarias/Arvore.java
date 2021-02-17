@@ -1,20 +1,20 @@
 package arvores_binarias;
 
-public class Arvore<nodo extends Comparable> {
+public class Arvore<TIPO extends Comparable> {
 
-	private Elemento<nodo> raiz;
+	private Elemento<TIPO> raiz;
 	
 	public Arvore() {
 		this.raiz = null;
 	}
 	
-	public void adicionar(nodo valor) {
-		Elemento<nodo> novoElemento = new Elemento<nodo>(valor);
+	public void adicionar(TIPO valor) {
+		Elemento<TIPO> novoElemento = new Elemento<TIPO>(valor);
 		if (raiz == null) {
 			this.raiz = novoElemento;
 
 		}else{
-			Elemento<nodo> atual = this.raiz;
+			Elemento<TIPO> atual = this.raiz;
 			while(true) {
 				if (novoElemento.getValor().compareTo(atual.getValor()) == -1){
 					if (atual.getEsquerda() != null) {
@@ -37,11 +37,11 @@ public class Arvore<nodo extends Comparable> {
 	
 	
 	
-	public Elemento<nodo> getRaiz() {
+	public Elemento<TIPO> getRaiz() {
 		return raiz;
 	}
 
-	public void emOrdem(Elemento<nodo> atual) {
+	public void emOrdem(Elemento<TIPO> atual) {
 		if (atual != null) {
 			emOrdem(atual.getEsquerda());
 			System.out.println(atual.getValor());
@@ -49,7 +49,7 @@ public class Arvore<nodo extends Comparable> {
 		}
 	}
 		
-	public void preOrdem(Elemento<nodo> atual) {
+	public void preOrdem(Elemento<TIPO> atual) {
 		if (atual != null) {
 			System.out.println(atual.getValor());
 			preOrdem(atual.getEsquerda());
@@ -57,7 +57,7 @@ public class Arvore<nodo extends Comparable> {
 		}
 	}
 	
-	public void posOrdem(Elemento<nodo> atual) {
+	public void posOrdem(Elemento<TIPO> atual) {
 		if (atual != null) {
 			posOrdem(atual.getEsquerda());
 			posOrdem(atual.getDireita());
